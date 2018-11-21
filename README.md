@@ -1,5 +1,4 @@
-Ubuntu 14.04 or 16.04 安裝Openface應用
-----------------------------------------------------------------------------------------------------------------------------------
+#Ubuntu 14.04 or 16.04 安裝Openface應用
 
 OpenFaceInstallScript-20181118目錄結構：
 ----------------------------------------------------------------------------------------------------------------------------------
@@ -122,12 +121,12 @@ $ python ~/src/data/openface/demos/classifier.py  infer ~/src/data/openface/mode
 請注意如果使用本專案提供的openface資料夾，不需要在做下列處理：
 在training-images目錄內，每一個人的臉部圖像都必須要放在對應的識別名稱資料夾內，例如：clapton-2.jpg放置在training-images/clapton-2裡面
 如果training-images目錄內都只放置圖片單檔，在執行到# Generate Representations 提取特徵 階段時會出現錯誤如下：
---
+
 running "find" on each class directory, and concatenate all those filenames into a single file containing all image paths for a given class	
 now combine all the files to a single large file	
 load the large concatenated list of sample paths to self.imagePath	
 /home/ubuntu/src/torch/install/bin/luajit: /home/ubuntu/src/data/openface/batch-represent/dataset.lua:193: Could not find any image file in the given input paths
---
+
 
 # Demo3測試-Preprocess the raw images 影像訓練檢測和校準
 $ python ~/src/data/openface/util/align-dlib.py  ~/src/data/openface/training-images/ align outerEyesAndNose ~/src/data/openface/aligned-images/ --size 96
