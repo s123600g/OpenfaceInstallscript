@@ -50,3 +50,17 @@ sudo pip install scikit-learn  --修正為--> sudo pip install scikit-learn==0.1
   + git clone https://github.com/cmusatyalab/openface.git
   
 #備註 "+" --> 增加 ，"-" --> 刪減
+
+安裝前條件：
+---------------------------------------------------------------------------------------------------------------------------------------
+1.Ubuntu 安裝最低版本為14.04 LTS ，目前已測試過16.04 LTS 是可行，18.04 LTS目前只有測試過可以安裝尚未測試是否可運行。
+
+2.如果是只使用CPU版本的話,不用管顯示卡部份，如果要使用顯示卡必須使用Nvidia顯示卡。
+
+3.如果是要使用到GPU版本的話,下列安裝步驟執行之前要先做安裝顯示卡驅動和CUDA,如果是筆電須注意雙顯切換問題,要先測試好驅動穩定性和能夠切換到使用GPU而不是使用內顯,這很重要！！！
+
+4.如果裝好了可以先測試在Nvidia-settings裡面看到有兩張顯卡資訊一張是內顯一張是外顯GPU,再來是Nvidia-smi裡面資訊能夠看到GPU正在運行中。
+
+5.可在nvidia-settings裡面設定切換要使用Nvidia顯示卡或者Intel內顯。
+
+6.如果要透過終端機切換Nvidia和內顯部份，可透過sudo prime-select nvidia(外顯) 或 sudo prime-select intel(內顯)
