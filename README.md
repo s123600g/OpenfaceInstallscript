@@ -97,9 +97,9 @@ Step3.安裝dlib,安裝指令參考檔案 "RunInstalldlib_20181118.sh"
 
 Step4-0.安裝Torch7,安裝指令參考檔案
 
-Step4-1."RunInstallTorch_20181118.sh"
+Step4-1.>> RunInstallTorch_20181118.sh
 
-Step4-2."RunInstallTorch_luarocks_20181118.sh"
+Step4-2.>> RunInstallTorch_luarocks_20181118.sh"
 
 Step4-3.只有使用CPU，而未使用GPU情況-->"RunInstallTorch_CPU_20181118.sh"
 
@@ -110,11 +110,11 @@ Step5.安裝設定Openface,安裝指令參考檔案 "RunInstallOpenface_20181118
 
 ---------------------------------------------------------------------------------------------------------------------------------------
 # Demo1測試:
-$ python ~/src/data/openface/demos/compare.py ~/src/data/openface/images/examples/{lennon*,clapton*}
+>> $ python ~/src/data/openface/demos/compare.py ~/src/data/openface/images/examples/{lennon*,clapton*}
 
 
 # Demo2測試:
-$ python ~/src/data/openface/demos/classifier.py  infer ~/src/data/openface/models/openface/celeb-classifier.nn4.small2.v1.pkl ~/src/data/openface/images/examples/carell.jpg
+>> $ python ~/src/data/openface/demos/classifier.py  infer ~/src/data/openface/models/openface/celeb-classifier.nn4.small2.v1.pkl ~/src/data/openface/images/examples/carell.jpg
 
 
 # Demo3測試:
@@ -134,19 +134,19 @@ load the large concatenated list of sample paths to self.imagePath
 
 Demo3測試1-影像檢測和校準
 
-python ~/src/data/openface/util/align-dlib.py  ~/src/data/openface/training-images/ align outerEyesAndNose ~/src/data/openface/aligned-images/ --size 96
+>> python ~/src/data/openface/util/align-dlib.py  ~/src/data/openface/training-images/ align outerEyesAndNose ~/src/data/openface/aligned-images/ --size 96
 
 Demo3測試2-提取特徵
 
-~/src/data/openface/batch-represent/main.lua -outDir ~/src/data/openface/generated-embeddings/ -data ~/src/data/openface/aligned-images
+>> ~/src/data/openface/batch-represent/main.lua -outDir ~/src/data/openface/generated-embeddings/ -data ~/src/data/openface/aligned-images
 
 Demo3測試3-建立訓練分類模型
 
-python ~/src/data/openface/demos/classifier.py train ~/src/data/openface/generated-embeddings/
+>> python ~/src/data/openface/demos/classifier.py train ~/src/data/openface/generated-embeddings/
 
 Demo3測試4-Face detection 臉部偵測
 
-python ~/src/data/openface/demos/classifier.py infer ~/src/data/openface/generated-embeddings/classifier.pkl ~/src/data/openface/test-images/clapton-1.jpg
+>> python ~/src/data/openface/demos/classifier.py infer ~/src/data/openface/generated-embeddings/classifier.pkl ~/src/data/openface/test-images/clapton-1.jpg
 
 # 注意事項：
 1. 安裝前請先注意套件來源庫有設為主要伺服器(main server)，不管是14.04或16.04都需要去檢查，16.04如果裝的是繁體中文預設會是臺灣伺服器,這樣會在第一步驟安裝時候就會發生錯誤,錯誤問題為依賴關係問題,訊息為"E:無法修正錯誤問題,因為您保留了損壞套件" 。
@@ -161,7 +161,7 @@ python ~/src/data/openface/demos/classifier.py infer ~/src/data/openface/generat
 
 6. 當安裝完之後請記得要修改sklearn參數有label.py和test_label.py這兩個檔案有要修改部份,在fix_sklearn目錄中有修改說明文件"fixcontent" 裡面有說明要改那一部份參數,"+"代表增加這一行,"-"代表拿掉這一行,此動作必須要做不然後面運行程式時候在sklearn部份會出問題。
 
-7. "RunInstalldlib_20181118.sh"安裝腳本需要用到"dlib-18.16.tar.bz2"檔案，預設在installOpenface目錄內會有，如果沒有此檔案請到 https://sourceforge.net/projects/boost/files/boost/1.62.0/中去下載。
+7. "RunInstalldlib_20181118.sh"安裝腳本需要用到"dlib-18.16.tar.bz2"檔案，預設在installOpenface目錄內會有，如果沒有此檔案請到 https://sourceforge.net/projects/boost/files/boost/1.62.0/ 中去下載。
 
 8. 安裝完Torch時，請在終端機測試輸入"th"是否能夠正常進入Torch模式，如果不行代表安裝過程設定有問題。
 
