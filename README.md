@@ -83,31 +83,32 @@ sudo pip install scikit-learn  --修正為--> sudo pip install scikit-learn==0.1
 >> $ sudo sh RunInstallpip_20181118.sh
 
 
+
 Step1.安裝相關前置套件與pip,安裝指令參考檔案 
->> RunInstallpip_20181118.sh
+>> sudo sh RunInstallpip_20181118.sh
 
 Step2.安裝Opencv版本為2.4,安裝指令參考檔案 
->> RunInstallOpenCV_20181118.sh
+>> sudo sh RunInstallOpenCV_20181118.sh
 
 Step3.安裝dlib,安裝指令參考檔案 
->> RunInstalldlib_20181118.sh
+>> sudo sh RunInstalldlib_20181118.sh
 
 Step4-0.安裝Torch,安裝指令參考檔案
 
 Step4-1.
->> RunInstallTorch_20181118.sh
+>> sudo sh RunInstallTorch_20181118.sh
 
 Step4-2.
->> RunInstallTorch_luarocks_20181118.sh"
+>> sudo sh RunInstallTorch_luarocks_20181118.sh"
 
 Step4-3.只有使用CPU，而未使用GPU情況
->> RunInstallTorch_CPU_20181118.sh
+>> sudo sh RunInstallTorch_CPU_20181118.sh
 
 Step4-4.有使用GPU情況
->> RunInstallTorch_GPU_20181118.sh
+>> sudo sh RunInstallTorch_GPU_20181118.sh
 
 Step5.安裝設定Openface,安裝指令參考檔案
->> RunInstallOpenface_20181118.sh
+>> sudo sh RunInstallOpenface_20181118.sh
 
 
 ---------------------------------------------------------------------------------------------------------------------------------------
