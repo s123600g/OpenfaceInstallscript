@@ -168,7 +168,7 @@ python ~/src/data/openface/demos/classifier.py infer ~/src/data/openface/generat
 9. 請注意classifier.py內 from sklearn.lda import LDA 已經不可用，新版本改為下列方式
 >> from sklearn.discriminant_analysis import LinearDiscriminantAnalysis as LDA
 
-如有需要使用請必須要更改，否則運行時會出現錯誤
+  如有需要使用請必須要更改，否則運行時會出現錯誤
 
 12. 關於Torch安裝部分，請注意在"RunInstallTorch_20181118.sh"腳本中
 #透過Git指令 > git clone 'URL' < 下載 GitHub 上的Torch 完整安裝包，並安裝Torch
@@ -182,14 +182,14 @@ to PATH and LD_LIBRARY_PATH in your /home/ubuntu/.bashrc? (yes/no)
 [yes] >>> 
 yes  <---請務必要輸入yes，否則系統會抓不到Torch
 
-輸入完畢後可在終端機輸入，使Torch剛剛設置的環境變數生效
-source ~/.bashrc
+  輸入完畢後可在終端機輸入，使Torch剛剛設置的環境變數生效
+  source ~/.bashrc
 
-如何測試Torch可正常被系統辨識抓到?
-在終端機輸入"th"，如果設定都正常，就會進入Torch命令模式。
+  如何測試Torch可正常被系統辨識抓到?
+  在終端機輸入"th"，如果設定都正常，就會進入Torch命令模式。
 
-如果終端機輸入"th"，卻沒有正常出現進入Torch命令模式，解決辦法如下：
-進入到你下載的torch目錄內，會看到"install-deps"、"install.sh"
-在終端機重新執行安裝程序，執行順序是
-1. sudo bash install-deps
-2. sudo ./install.sh
+  如果終端機輸入"th"，卻沒有正常出現進入Torch命令模式，解決辦法如下：
+  進入到你下載的torch目錄內，會看到"install-deps"、"install.sh"
+  在終端機重新執行安裝程序，執行順序是
+  1. sudo bash install-deps
+  2. sudo ./install.sh
