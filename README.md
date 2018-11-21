@@ -133,13 +133,17 @@ load the large concatenated list of sample paths to self.imagePath
 
 
 Demo3測試1-影像檢測和校準
-$ python ~/src/data/openface/util/align-dlib.py  ~/src/data/openface/training-images/ align outerEyesAndNose ~/src/data/openface/aligned-images/ --size 96
+
+python ~/src/data/openface/util/align-dlib.py  ~/src/data/openface/training-images/ align outerEyesAndNose ~/src/data/openface/aligned-images/ --size 96
 
 Demo3測試2-提取特徵
-$ ~/src/data/openface/batch-represent/main.lua -outDir ~/src/data/openface/generated-embeddings/ -data ~/src/data/openface/aligned-images
+
+~/src/data/openface/batch-represent/main.lua -outDir ~/src/data/openface/generated-embeddings/ -data ~/src/data/openface/aligned-images
 
 Demo3測試3-建立訓練分類模型
-$ python ~/src/data/openface/demos/classifier.py train ~/src/data/openface/generated-embeddings/
+
+python ~/src/data/openface/demos/classifier.py train ~/src/data/openface/generated-embeddings/
 
 Demo3測試4-Face detection 臉部偵測
-$ python ~/src/data/openface/demos/classifier.py infer ~/src/data/openface/generated-embeddings/classifier.pkl ~/src/data/openface/test-images/clapton-1.jpg
+
+python ~/src/data/openface/demos/classifier.py infer ~/src/data/openface/generated-embeddings/classifier.pkl ~/src/data/openface/test-images/clapton-1.jpg
