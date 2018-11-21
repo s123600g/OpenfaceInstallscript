@@ -11,27 +11,42 @@ OpenFaceInstallScript-20181118目錄結構：
 1.更動所有安裝腳本的內容，修改腳本在運作上問題。
 
 2.所有腳本的檔名日期均更改為20181118。
+
 3.修改一些安裝步驟，增加二個安裝腳本(RunInstallTorch_20181118.sh、RunInstallTorch_luarocks_20181118.sh)。
+
 4.更改DemoCommand內容，Demo1.txt、Demo2.txt、Demo3.txt。
+
 5.修正"RunInstallpip_20181118.sh"腳本內容關於
+
 sudo pip install scikit-learn  --修正為--> sudo pip install scikit-learn==0.18 #限定0.18版本。
+
 6.更新注意事項說明。
+
 7.更新安裝前條件說明。
+
 8.更動資料夾內容架構。
+
 
 2018/08/16更新事項：
 -----------------------------------------------------------------------------------------------------------------------------------
 1.增加一些安裝腳本指令註解說明.
+
 2.修改更新注意事項說明.
+
 3.修改安裝前條件說明.
+
 3.重新整理安裝腳本內的指令.
+
 4.更新 RunInstallpip_20180816.sh 內容
   + sudo pip install nolearn # for use nolearn.DBN
+  
 5.更新 RunInstallOpenCV_20180816.sh 內容
   - mkdir release
   + sudo mkdir release
+  
 6.更新 RunInstallOpenface_20180816.sh 內容
   + mkdir ~/data/
   + cd ~/data
   + git clone https://github.com/cmusatyalab/openface.git
+  
 #備註 "+" --> 增加 ，"-" --> 刪減
