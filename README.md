@@ -153,7 +153,7 @@ python ~/src/data/openface/demos/classifier.py infer ~/src/data/openface/generat
 
 2. 請按照上述順序依序安裝,請透過Terminal下執行腳本方式運行,如果用腳本方式在運作中會出問題,代表有些指令不適合用腳本方式執行，請注意錯誤訊息是指什麼，再來更改腳本內容。
 
-3. 請注意好各套件安裝是否在家目錄"~"或Root根目錄"/"，如果路徑是"~/"開頭代表是在家目錄底下，如果路徑是"/"開頭代表是在Root根目錄底下。
+3. 請注意好各套件安裝是否在家目錄"~/"或Root根目錄"/"，如果路徑是"~/"開頭代表是在家目錄底下，如果路徑是"/"開頭代表是在Root根目錄底下。
 
 4. 有些安裝程序是在Root根目錄底下執行，必須要在指令開頭加上"sudo"這點必須注意。
 
@@ -166,7 +166,8 @@ python ~/src/data/openface/demos/classifier.py infer ~/src/data/openface/generat
 8. 安裝完Torch時，請在終端機測試輸入"th"是否能夠正常進入Torch模式，如果不行代表安裝過程設定有問題。
 
 9. 請注意classifier.py內 from sklearn.lda import LDA 已經不可用，新版本改為下列方式
->> from sklearn.discriminant_analysis import LinearDiscriminantAnalysis as LDA <<
+>> from sklearn.discriminant_analysis import LinearDiscriminantAnalysis as LDA
+
 如有需要使用請必須要更改，否則運行時會出現錯誤
 
 12. 關於Torch安裝部分，請注意在"RunInstallTorch_20181118.sh"腳本中
@@ -179,7 +180,7 @@ sudo ./install.sh   <--此行執行安裝完畢後，會詢問是否要加入Tor
 >>Do you want to automatically prepend the Torch install location
 to PATH and LD_LIBRARY_PATH in your /home/ubuntu/.bashrc? (yes/no)
 [yes] >>> 
-yes  <---請務必要輸入yes，否則系統會抓不到Torch<<
+yes  <---請務必要輸入yes，否則系統會抓不到Torch
 
 輸入完畢後可在終端機輸入，使Torch剛剛設置的環境變數生效
 source ~/.bashrc
