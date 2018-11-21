@@ -117,11 +117,11 @@ Step5.安裝設定Openface,安裝指令參考檔案
 
 ---------------------------------------------------------------------------------------------------------------------------------------
 # Demo1測試:
->> $ python ~/src/data/openface/demos/compare.py ~/src/data/openface/images/examples/{lennon*,clapton*}
+>> python ~/src/data/openface/demos/compare.py ~/src/data/openface/images/examples/{lennon*,clapton*}
 
 
 # Demo2測試:
->> $ python ~/src/data/openface/demos/classifier.py  infer ~/src/data/openface/models/openface/celeb-classifier.nn4.small2.v1.pkl ~/src/data/openface/images/examples/carell.jpg
+>> python ~/src/data/openface/demos/classifier.py  infer ~/src/data/openface/models/openface/celeb-classifier.nn4.small2.v1.pkl ~/src/data/openface/images/examples/carell.jpg
 
 
 # Demo3測試:
@@ -189,14 +189,25 @@ to PATH and LD_LIBRARY_PATH in your /home/ubuntu/.bashrc? (yes/no)
 [yes] >>> 
 yes  <---請務必要輸入yes，否則系統會抓不到Torch
 
-  輸入完畢後可在終端機輸入，使Torch剛剛設置的環境變數生效
-  source ~/.bashrc
+ 輸入完畢後可在終端機輸入，使Torch剛剛設置的環境變數生效
+ >> source ~/.bashrc
 
-  如何測試Torch可正常被系統辨識抓到?
-  在終端機輸入"th"，如果設定都正常，就會進入Torch命令模式。
+如何測試Torch可正常被系統辨識抓到?
+在終端機輸入"th"，如果設定都正常，就會進入Torch命令模式。
 
-  如果終端機輸入"th"，卻沒有正常出現進入Torch命令模式，解決辦法如下：
-  進入到你下載的torch目錄內，會看到"install-deps"、"install.sh"
-  在終端機重新執行安裝程序，執行順序是
-  1. sudo bash install-deps
-  2. sudo ./install.sh
+如果終端機輸入"th"，卻沒有正常出現進入Torch命令模式，解決辦法如下：
+進入到你下載的torch目錄內，會看到"install-deps"、"install.sh"
+在終端機重新執行安裝程序，執行順序是
+>> 1. sudo bash install-deps
+>> 2. sudo ./install.sh
+
+當執行第二個時，請注意是否有出現詢問是否要加入Torch到環境變數，如上所示。
+
+查看系統環境變數，可在"~/.bashrc"內觀看
+會看到最後一行出現". /home/ubuntu/src/torch/install/bin/torch-activate" 。
+
+13.請注意在Ubuntu14.04在終端機執行腳本方式是透過"sh"來進行(Ex:" sudo sh RunInstallTorch_GPU_20181118.sh ")，16.04可以用"."來取代"sh"進行。
+
+14.關於Python的scikit-learn套件，有限定版本要求，在"RunInstallpip_20181118.sh"腳本中安裝指令已固定要求安裝版本為0.18版，0.20版本或低於0.18版本都會出問題，請注意一定要0.18版本。
+
+16.本專案腳本在安裝時，會自動在家目錄底下建立一個"src"目錄，裡面會放置"dlib-18.16"、"torch"、"data"內放置"openface"，總共會有三個目錄資料，不管是運作還是安裝都會需要用到，請勿隨意更動。
