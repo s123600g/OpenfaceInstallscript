@@ -113,11 +113,11 @@ Step5.安裝設定Openface,安裝指令參考檔案 "RunInstallOpenface_20181118
 $ python ~/src/data/openface/demos/compare.py ~/src/data/openface/images/examples/{lennon*,clapton*}
 
 
-2. Demo2:
+# Demo2測試:
 $ python ~/src/data/openface/demos/classifier.py  infer ~/src/data/openface/models/openface/celeb-classifier.nn4.small2.v1.pkl ~/src/data/openface/images/examples/carell.jpg
 
 
-3. Demo3:
+# Demo3測試:
 此Demo必須要在openface裡面建立2個資料夾，分別是"training-images"、"test-images"，測試範例圖片在openfae/images/examples。
 請注意如果使用本專案提供的openface資料夾，不需要在做下列處理：
 在training-images目錄內，每一個人的臉部圖像都必須要放在對應的識別名稱資料夾內，例如：clapton-2.jpg放置在training-images/clapton-2裡面
@@ -129,14 +129,14 @@ load the large concatenated list of sample paths to self.imagePath
 /home/ubuntu/src/torch/install/bin/luajit: /home/ubuntu/src/data/openface/batch-represent/dataset.lua:193: Could not find any image file in the given input paths
 --
 
-# Preprocess the raw images 影像訓練檢測和校準
+# Demo3測試-Preprocess the raw images 影像訓練檢測和校準
 $ python ~/src/data/openface/util/align-dlib.py  ~/src/data/openface/training-images/ align outerEyesAndNose ~/src/data/openface/aligned-images/ --size 96
 
-# Generate Representations 提取特徵
+# Demo3測試-Generate Representations 提取特徵
 $ ~/src/data/openface/batch-represent/main.lua -outDir ~/src/data/openface/generated-embeddings/ -data ~/src/data/openface/aligned-images
 
-# Create the Classification Model 建立訓練分類模型
+# Demo3測試-Create the Classification Model 建立訓練分類模型
 $ python ~/src/data/openface/demos/classifier.py train ~/src/data/openface/generated-embeddings/
 
-# Face detection 臉部偵測
+# Demo3測試-Face detection 臉部偵測
 $ python ~/src/data/openface/demos/classifier.py infer ~/src/data/openface/generated-embeddings/classifier.pkl ~/src/data/openface/test-images/clapton-1.jpg
