@@ -147,3 +147,7 @@ python ~/src/data/openface/demos/classifier.py train ~/src/data/openface/generat
 Demo3測試4-Face detection 臉部偵測
 
 python ~/src/data/openface/demos/classifier.py infer ~/src/data/openface/generated-embeddings/classifier.pkl ~/src/data/openface/test-images/clapton-1.jpg
+
+# 注意事項：
+1. 安裝前請先注意套件來源庫有設為主要伺服器(main server)，不管是14.04或16.04都需要去檢查，16.04如果裝的是繁體中文預設會是臺灣伺服器,這樣會在第一步驟安裝時候就會發生錯誤,錯誤問題為依賴關係問題,訊息為"E:無法修正錯誤問題,因為您保留了損壞套件" 
+
