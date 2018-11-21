@@ -107,9 +107,9 @@ Step4-4.有使用GPU情況-->"RunInstallTorch_GPU_20181118.sh"
 
 Step5.安裝設定Openface,安裝指令參考檔案 "RunInstallOpenface_20181118.sh"
 
-測試Demo內容：
+
 ---------------------------------------------------------------------------------------------------------------------------------------
-1. Demo1:
+# Demo1測試:
 $ python ~/src/data/openface/demos/compare.py ~/src/data/openface/images/examples/{lennon*,clapton*}
 
 
