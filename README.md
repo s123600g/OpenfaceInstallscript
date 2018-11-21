@@ -176,10 +176,10 @@ cd ~/src/torch
 sudo bash install-deps
 sudo ./install.sh   <--此行執行安裝完畢後，會詢問是否要加入Torch到環境變數去，如下:
 
-Do you want to automatically prepend the Torch install location
+>>Do you want to automatically prepend the Torch install location
 to PATH and LD_LIBRARY_PATH in your /home/ubuntu/.bashrc? (yes/no)
 [yes] >>> 
-yes  <---請務必要輸入yes，否則系統會抓不到Torch
+yes  <---請務必要輸入yes，否則系統會抓不到Torch<<
 
 輸入完畢後可在終端機輸入，使Torch剛剛設置的環境變數生效
 source ~/.bashrc
