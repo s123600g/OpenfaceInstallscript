@@ -122,7 +122,6 @@ $ python ~/src/data/openface/demos/classifier.py  infer ~/src/data/openface/mode
 
 測試範例圖片在openfae/images/examples。
 
-請注意如果使用本專案提供的openface資料夾，不需要在做下列處理：
 
 在training-images目錄內，每一個人的臉部圖像都必須要放在對應的識別名稱資料夾內，例如：clapton-2.jpg放置在training-images/clapton-2裡面
 如果training-images目錄內都只放置圖片單檔，在執行到# Generate Representations 提取特徵 階段時會出現錯誤如下：
