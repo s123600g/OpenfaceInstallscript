@@ -68,17 +68,27 @@ sudo pip install scikit-learn  --修正為--> sudo pip install scikit-learn==0.1
 安裝步驟：
 ---------------------------------------------------------------------------------------------------------------------------------------
 請透過終端機(Terminal)進行安裝，透過cd指另切換到腳本存在的目錄底下
+
 本目錄為~/OpenFaceInstallScript-20181118，安裝腳本存在~/OpenFaceInstallScript-20181118/InstallOpenface
+
 Ex:
+
 $ cd ~/OpenFaceInstallScript-20181118/InstallOpenface
 
+
 查看當前位置底下所有目錄檔案清單，透過"ls"
+
 Ex:
+
 $ ls
 
+
 以Ubuntu14.04為例，假如要執行"RunInstallpip_20181118.sh"腳本，透過"sh"
+
 Ex:
+
 $ sudo sh RunInstallpip_20181118.sh
+
 
 Step1.安裝相關前置套件與pip,安裝指令參考檔案 "RunInstallpip_20181118.sh"
 
