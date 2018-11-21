@@ -132,10 +132,10 @@ load the large concatenated list of sample paths to self.imagePath
 /home/ubuntu/src/torch/install/bin/luajit: /home/ubuntu/src/data/openface/batch-represent/dataset.lua:193: Could not find any image file in the given input paths
 
 
-# Demo3測試-Preprocess the raw images 影像訓練檢測和校準
+# Demo3測試-影像檢測和校準
 $ python ~/src/data/openface/util/align-dlib.py  ~/src/data/openface/training-images/ align outerEyesAndNose ~/src/data/openface/aligned-images/ --size 96
 
-# Demo3測試-Generate Representations 提取特徵
+# Demo3測試-提取特徵
 $ ~/src/data/openface/batch-represent/main.lua -outDir ~/src/data/openface/generated-embeddings/ -data ~/src/data/openface/aligned-images
 
 # Demo3測試-Create the Classification Model 建立訓練分類模型
