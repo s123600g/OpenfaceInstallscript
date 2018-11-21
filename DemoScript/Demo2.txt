@@ -1,0 +1,1 @@
+python ~/src/data/openface/demos/classifier.py  infer ~/src/data/openface/models/openface/celeb-classifier.nn4.small2.v1.pkl ~/src/data/openface/images/examples/carell.jpg

@@ -1,0 +1,1 @@
+python ~/src/data/openface/demos/compare.py ~/src/data/openface/images/examples/{lennon*,clapton*}

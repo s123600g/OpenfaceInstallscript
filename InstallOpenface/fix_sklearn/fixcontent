@@ -1,0 +1,29 @@
+https://github.com/scikit-learn/scikit-learn/pull/9816
+https://github.com/scikit-learn/scikit-learn/commit/c554aad456b6302a8dd8838769769eeecc1cf734#diff-1e175ddb0d84aad0a578d34553f6f9c6R137
+
+/usr/local/lib/python2.7/dist-packages/sklearn/preprocessing/label.py line157:
+DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+
+sklearn/preprocessing/label.py
+
+133-            raise ValueError("y contains new labels: %s" % str(diff))
+133+            raise ValueError("y contains previously unseen labels: %s" % str(diff))
+
+
+151-        if diff:
+152-            raise ValueError("y contains new labels: %s" % str(diff))
+
+152+        if len(diff):
+153+            raise ValueError("y contains previously unseen labels: %s" % str(diff))
+
+
+
+
+sklearn/preprocessing/tests/test_label.py
+206-    le.fit([1, 2, 3, 1, -1])
+207-    assert_raises(ValueError, le.inverse_transform, [-1])
+
+206+    le.fit([1, 2, 3, -1, 1])
+207+    msg = "contains previously unseen labels"
+208+    assert_raise_message(ValueError, msg, le.inverse_transform, [-2])
+209+    assert_raise_message(ValueError, msg, le.inverse_transform, [-2, -3, -4])
