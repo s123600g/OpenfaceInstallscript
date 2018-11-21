@@ -97,9 +97,11 @@ Step3.安裝dlib,安裝指令參考檔案 "RunInstalldlib_20181118.sh"
 
 Step4-0.安裝Torch7,安裝指令參考檔案
 
-Step4-1.>> RunInstallTorch_20181118.sh
+Step4-1.
+>> RunInstallTorch_20181118.sh
 
-Step4-2.>> RunInstallTorch_luarocks_20181118.sh"
+Step4-2.
+>> RunInstallTorch_luarocks_20181118.sh"
 
 Step4-3.只有使用CPU，而未使用GPU情況-->"RunInstallTorch_CPU_20181118.sh"
 
