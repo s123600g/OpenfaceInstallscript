@@ -57,9 +57,9 @@ sudo pip install scikit-learn  --修正為--> sudo pip install scikit-learn==0.1
 
 2.如果是只使用CPU版本的話,不用管顯示卡部份，如果要使用顯示卡必須使用Nvidia顯示卡。
 
-3.如果是要使用到GPU版本的話,下列安裝步驟執行之前要先做安裝顯示卡驅動和CUDA,如果是筆電須注意雙顯切換問題,要先測試好驅動穩定性和能夠切換到使用GPU而不是使用內顯,這很重要！！！
+3.如果是要使用到GPU版本的話,下列安裝步驟執行之前要先做安裝顯示卡驅動和CUDA,如果是筆電須注意雙顯切換問題,要先測試好驅動穩定性和能夠切換到使用GPU而不是使用內顯。
 
-4.如果裝好了可以先測試在Nvidia-settings裡面看到有兩張顯卡資訊一張是內顯一張是外顯GPU,再來是Nvidia-smi裡面資訊能夠看到GPU正在運行中。
+4.如果顯示卡驅動和CUDA都裝好了，可以先測試在Nvidia-settings裡面看到有兩張顯卡資訊一張是內顯一張是外顯GPU,再來是Nvidia-smi裡面資訊能夠看到GPU正在運行中。
 
 5.可在nvidia-settings裡面設定切換要使用Nvidia顯示卡或者Intel內顯。
 
