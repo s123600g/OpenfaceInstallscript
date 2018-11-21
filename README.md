@@ -149,5 +149,46 @@ Demo3測試4-Face detection 臉部偵測
 python ~/src/data/openface/demos/classifier.py infer ~/src/data/openface/generated-embeddings/classifier.pkl ~/src/data/openface/test-images/clapton-1.jpg
 
 # 注意事項：
-1. 安裝前請先注意套件來源庫有設為主要伺服器(main server)，不管是14.04或16.04都需要去檢查，16.04如果裝的是繁體中文預設會是臺灣伺服器,這樣會在第一步驟安裝時候就會發生錯誤,錯誤問題為依賴關係問題,訊息為"E:無法修正錯誤問題,因為您保留了損壞套件" 
+1. 安裝前請先注意套件來源庫有設為主要伺服器(main server)，不管是14.04或16.04都需要去檢查，16.04如果裝的是繁體中文預設會是臺灣伺服器,這樣會在第一步驟安裝時候就會發生錯誤,錯誤問題為依賴關係問題,訊息為"E:無法修正錯誤問題,因為您保留了損壞套件" 。
 
+2. 請按照上述順序依序安裝,請透過Terminal下執行腳本方式運行,如果用腳本方式在運作中會出問題,代表有些指令不適合用腳本方式執行，請注意錯誤訊息是指什麼，再來更改腳本內容。
+
+3. 請注意好各套件安裝是否在家目錄"~"或Root根目錄"/"，如果路徑是"~/"開頭代表是在家目錄底下，如果路徑是"/"開頭代表是在Root根目錄底下。
+
+4. 有些安裝程序是在Root根目錄底下執行，必須要在指令開頭加上"sudo"這點必須注意。
+
+5. 如果有看到指令後面有空一行然後加上"-y",代表執行這指令時會問你是否同意繼續,我們給它加上這參數用意是讓它自動繼續執行下去預設是同意。
+
+6. 當安裝完之後請記得要修改sklearn參數有label.py和test_label.py這兩個檔案有要修改部份,在fix_sklearn目錄中有修改說明文件"fixcontent" 裡面有說明要改那一部份參數,"+"代表增加這一行,"-"代表拿掉這一行,此動作必須要做不然後面運行程式時候在sklearn部份會出問題。
+
+7. "RunInstalldlib_20181118.sh"安裝腳本需要用到"dlib-18.16.tar.bz2"檔案，預設在installOpenface目錄內會有，如果沒有此檔案請到 https://sourceforge.net/projects/boost/files/boost/1.62.0/中去下載。
+
+8. 安裝完Torch時，請在終端機測試輸入"th"是否能夠正常進入Torch模式，如果不行代表安裝過程設定有問題。
+
+9. 請注意classifier.py內 from sklearn.lda import LDA 已經不可用，新版本改為下列方式
+>> from sklearn.discriminant_analysis import LinearDiscriminantAnalysis as LDA <<
+如有需要使用請必須要更改，否則運行時會出現錯誤
+
+12. 關於Torch安裝部分，請注意在"RunInstallTorch_20181118.sh"腳本中
+#透過Git指令 > git clone 'URL' < 下載 GitHub 上的Torch 完整安裝包，並安裝Torch
+sudo git clone https://github.com/torch/distro.git ~/src/torch --recursive
+cd ~/src/torch
+sudo bash install-deps
+sudo ./install.sh   <--此行執行安裝完畢後，會詢問是否要加入Torch到環境變數去，如下:
+
+Do you want to automatically prepend the Torch install location
+to PATH and LD_LIBRARY_PATH in your /home/ubuntu/.bashrc? (yes/no)
+[yes] >>> 
+yes  <---請務必要輸入yes，否則系統會抓不到Torch
+
+輸入完畢後可在終端機輸入，使Torch剛剛設置的環境變數生效
+source ~/.bashrc
+
+如何測試Torch可正常被系統辨識抓到?
+在終端機輸入"th"，如果設定都正常，就會進入Torch命令模式。
+
+如果終端機輸入"th"，卻沒有正常出現進入Torch命令模式，解決辦法如下：
+進入到你下載的torch目錄內，會看到"install-deps"、"install.sh"
+在終端機重新執行安裝程序，執行順序是
+1. sudo bash install-deps
+2. sudo ./install.sh
