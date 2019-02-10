@@ -12,23 +12,23 @@ OpenFaceInstallScript-20181118目錄結構：
 
 2018/11/18更新事項：
 ----------------------------------------------------------------------------------------------------------------------------------
-1.更動所有安裝腳本的內容，修改腳本在運作上問題。
+1.  更動所有安裝腳本的內容，修改腳本在運作上問題。
 
-2.所有腳本的檔名日期均更改為20181118。
+2.  所有腳本的檔名日期均更改為20181118。
 
-3.修改一些安裝步驟，增加二個安裝腳本(RunInstallTorch_20181118.sh、RunInstallTorch_luarocks_20181118.sh)。
+3.  修改一些安裝步驟，增加二個安裝腳本(RunInstallTorch_20181118.sh、RunInstallTorch_luarocks_20181118.sh)。
 
-4.更改DemoCommand內容，Demo1.txt、Demo2.txt、Demo3.txt。
+4.  更改DemoCommand內容，Demo1.txt、Demo2.txt、Demo3.txt。
 
-5.修正"RunInstallpip_20181118.sh"腳本內容關於
+5.  修正"RunInstallpip_20181118.sh"腳本內容關於
 
-sudo pip install scikit-learn  --修正為--> sudo pip install scikit-learn==0.18 #限定0.18版本。
+  > sudo pip install scikit-learn  --修正為--> sudo pip install scikit-learn==0.18 #限定0.18版本。
 
-6.更新注意事項說明。
+6.  更新注意事項說明。
 
-7.更新安裝前條件說明。
+7.  更新安裝前條件說明。
 
-8.更動資料夾內容架構。
+8.  更動資料夾內容架構。
 
 
 2018/08/16更新事項：
