@@ -72,53 +72,53 @@ OpenFaceInstallScript-20181118目錄結構：
 請透過終端機(Terminal)進行安裝，透過cd指另切換到腳本存在的目錄底下
 
 本目錄為~/OpenFaceInstallScript-20181118，安裝腳本存在~/OpenFaceInstallScript-20181118/InstallOpenface
->> $ cd ~/OpenFaceInstallScript-20181118/InstallOpenface
+> $ cd ~/OpenFaceInstallScript-20181118/InstallOpenface
 
 
 
 查看當前位置底下所有目錄檔案清單，透過"ls"
->> $ ls
+> $ ls
 
 
 以Ubuntu14.04為例，假如要執行"RunInstallpip_20181118.sh"腳本，透過"sh"
->> $ sudo sh RunInstallpip_20181118.sh
+> $ sudo sh RunInstallpip_20181118.sh
 
 
 
 Step1.安裝相關前置套件與pip,安裝指令參考檔案 
->> sudo sh RunInstallpip_20181118.sh
+> sudo sh RunInstallpip_20181118.sh
 
 Step2.安裝Opencv版本為2.4,安裝指令參考檔案 
->> sudo sh RunInstallOpenCV_20181118.sh
+> sudo sh RunInstallOpenCV_20181118.sh
 
 Step3.安裝dlib,安裝指令參考檔案 
->> sudo sh RunInstalldlib_20181118.sh
+> sudo sh RunInstalldlib_20181118.sh
 
 Step4-0.安裝Torch,安裝指令參考檔案
 
 Step4-1.
->> sudo sh RunInstallTorch_20181118.sh
+> sudo sh RunInstallTorch_20181118.sh
 
 Step4-2.
->> sudo sh RunInstallTorch_luarocks_20181118.sh"
+> sudo sh RunInstallTorch_luarocks_20181118.sh"
 
 Step4-3.只有使用CPU，而未使用GPU情況
->> sudo sh RunInstallTorch_CPU_20181118.sh
+> sudo sh RunInstallTorch_CPU_20181118.sh
 
 Step4-4.有使用GPU情況
->> sudo sh RunInstallTorch_GPU_20181118.sh
+> sudo sh RunInstallTorch_GPU_20181118.sh
 
 Step5.安裝設定Openface,安裝指令參考檔案
->> sudo sh RunInstallOpenface_20181118.sh
+> sudo sh RunInstallOpenface_20181118.sh
 
 
 ---------------------------------------------------------------------------------------------------------------------------------------
 # Demo1測試:
->> python ~/src/data/openface/demos/compare.py ~/src/data/openface/images/examples/{lennon*,clapton*}
+> python ~/src/data/openface/demos/compare.py ~/src/data/openface/images/examples/{lennon*,clapton*}
 
 
 # Demo2測試:
->> python ~/src/data/openface/demos/classifier.py  infer ~/src/data/openface/models/openface/celeb-classifier.nn4.small2.v1.pkl ~/src/data/openface/images/examples/carell.jpg
+> python ~/src/data/openface/demos/classifier.py  infer ~/src/data/openface/models/openface/celeb-classifier.nn4.small2.v1.pkl ~/src/data/openface/images/examples/carell.jpg
 
 
 # Demo3測試:
@@ -138,70 +138,70 @@ load the large concatenated list of sample paths to self.imagePath
 
 Demo3測試1-影像檢測和校準
 
->> python ~/src/data/openface/util/align-dlib.py  ~/src/data/openface/training-images/ align outerEyesAndNose ~/src/data/openface/aligned-images/ --size 96
+> python ~/src/data/openface/util/align-dlib.py  ~/src/data/openface/training-images/ align outerEyesAndNose ~/src/data/openface/aligned-images/ --size 96
 
 Demo3測試2-提取特徵
 
->> ~/src/data/openface/batch-represent/main.lua -outDir ~/src/data/openface/generated-embeddings/ -data ~/src/data/openface/aligned-images
+> ~/src/data/openface/batch-represent/main.lua -outDir ~/src/data/openface/generated-embeddings/ -data ~/src/data/openface/aligned-images
 
 Demo3測試3-建立訓練分類模型
 
->> python ~/src/data/openface/demos/classifier.py train ~/src/data/openface/generated-embeddings/
+> python ~/src/data/openface/demos/classifier.py train ~/src/data/openface/generated-embeddings/
 
 Demo3測試4-Face detection 臉部偵測
 
->> python ~/src/data/openface/demos/classifier.py infer ~/src/data/openface/generated-embeddings/classifier.pkl ~/src/data/openface/test-images/clapton-1.jpg
+> python ~/src/data/openface/demos/classifier.py infer ~/src/data/openface/generated-embeddings/classifier.pkl ~/src/data/openface/test-images/clapton-1.jpg
 
 # 注意事項：
-1. 安裝前請先注意套件來源庫有設為主要伺服器(main server)，不管是14.04或16.04都需要去檢查，16.04如果裝的是繁體中文預設會是臺灣伺服器,這樣會在第一步驟安裝時候就會發生錯誤,錯誤問題為依賴關係問題,訊息為"E:無法修正錯誤問題,因為您保留了損壞套件" 。
+1.  安裝前請先注意套件來源庫有設為主要伺服器(main server)，不管是14.04或16.04都需要去檢查，16.04如果裝的是繁體中文預設會是臺灣伺服器,這樣會在第一步驟安裝時候就會發生錯誤,錯誤問題為依賴關係問題,訊息為"E:無法修正錯誤問題,因為您保留了損壞套件" 。
 
-2. 請按照上述順序依序安裝,請透過Terminal下執行腳本方式運行,如果用腳本方式在運作中會出問題,代表有些指令不適合用腳本方式執行，請注意錯誤訊息是指什麼，再來更改腳本內容。
+2.  請按照上述順序依序安裝,請透過Terminal下執行腳本方式運行,如果用腳本方式在運作中會出問題,代表有些指令不適合用腳本方式執行，請注意錯誤訊息是指什麼，再來更改腳本內容。
 
-3. 請注意好各套件安裝是否在家目錄或Root根目錄，如果路徑是'~/'開頭代表是在家目錄底下，如果路徑是'/'開頭代表是在Root根目錄底下。
+3.  請注意好各套件安裝是否在家目錄或Root根目錄，如果路徑是'~/'開頭代表是在家目錄底下，如果路徑是'/'開頭代表是在Root根目錄底下。
 
-4. 有些安裝程序是在Root根目錄底下執行，必須要在指令開頭加上"sudo"這點必須注意。
+4.  有些安裝程序是在Root根目錄底下執行，必須要在指令開頭加上"sudo"這點必須注意。
 
-5. 如果有看到指令後面有空一行然後加上"-y",代表執行這指令時會問你是否同意繼續,我們給它加上這參數用意是讓它自動繼續執行下去預設是同意。
+5.  如果有看到指令後面有空一行然後加上"-y",代表執行這指令時會問你是否同意繼續,我們給它加上這參數用意是讓它自動繼續執行下去預設是同意。
 
-6. 當安裝完之後請記得要修改sklearn參數有label.py和test_label.py這兩個檔案有要修改部份,在fix_sklearn目錄中有修改說明文件"fixcontent" 裡面有說明要改那一部份參數,"+"代表增加這一行,"-"代表拿掉這一行,此動作必須要做不然後面運行程式時候在sklearn部份會出問題。
+6.  當安裝完之後請記得要修改sklearn參數有label.py和test_label.py這兩個檔案有要修改部份,在fix_sklearn目錄中有修改說明文件"fixcontent" 裡面有說明要改那一部份參數,"+"代表增加這一行,"-"代表拿掉這一行,此動作必須要做不然後面運行程式時候在sklearn部份會出問題。
 
-7. "RunInstalldlib_20181118.sh"安裝腳本需要用到"dlib-18.16.tar.bz2"檔案，預設在installOpenface目錄內會有，如果沒有此檔案請到 https://sourceforge.net/projects/boost/files/boost/1.62.0/ 中去下載。
+7.  "RunInstalldlib_20181118.sh"安裝腳本需要用到"dlib-18.16.tar.bz2"檔案，預設在installOpenface目錄內會有，如果沒有此檔案請到 https://sourceforge.net/projects/boost/files/boost/1.62.0/ 中去下載。
 
-8. 安裝完Torch時，請在終端機測試輸入"th"是否能夠正常進入Torch模式，如果不行代表安裝過程設定有問題。
+8.  安裝完Torch時，請在終端機測試輸入"th"是否能夠正常進入Torch模式，如果不行代表安裝過程設定有問題。
 
-9. 請注意classifier.py內 from sklearn.lda import LDA 已經不可用，新版本改為下列方式
->> from sklearn.discriminant_analysis import LinearDiscriminantAnalysis as LDA
+9.  請注意classifier.py內 from sklearn.lda import LDA 已經不可用，新版本改為下列方式
+    > from sklearn.discriminant_analysis import LinearDiscriminantAnalysis as LDA
 
   如有需要使用請必須要更改，否則運行時會出現錯誤
 
 12. 關於Torch安裝部分，請注意在"RunInstallTorch_20181118.sh"腳本中
-#透過Git指令 > git clone 'URL' < 下載 GitHub 上的Torch 完整安裝包，並安裝Torch
-sudo git clone https://github.com/torch/distro.git ~/src/torch --recursive
-cd ~/src/torch
-sudo bash install-deps
-sudo ./install.sh   <--此行執行安裝完畢後，會詢問是否要加入Torch到環境變數去，如下:
+    #透過Git指令 > git clone 'URL' < 下載 GitHub 上的Torch 完整安裝包，並安裝Torch
+    > sudo git clone https://github.com/torch/distro.git ~/src/torch --recursive
+    > cd ~/src/torch
+    > sudo bash install-deps
+    > sudo ./install.sh   <--此行執行安裝完畢後，會詢問是否要加入Torch到環境變數去，如下:
 
->>Do you want to automatically prepend the Torch install location
-to PATH and LD_LIBRARY_PATH in your /home/ubuntu/.bashrc? (yes/no)
-[yes] >>> 
-yes  <---請務必要輸入yes，否則系統會抓不到Torch
+    >>Do you want to automatically prepend the Torch install location
+    to PATH and LD_LIBRARY_PATH in your /home/ubuntu/.bashrc? (yes/no)
+    [yes] >>> 
+    yes  <---請務必要輸入yes，否則系統會抓不到Torch
 
- 輸入完畢後可在終端機輸入，使Torch剛剛設置的環境變數生效
- >> source ~/.bashrc
+    輸入完畢後可在終端機輸入，使Torch剛剛設置的環境變數生效
+    > source ~/.bashrc
 
-如何測試Torch可正常被系統辨識抓到?
-在終端機輸入"th"，如果設定都正常，就會進入Torch命令模式。
+    如何測試Torch可正常被系統辨識抓到?
+    在終端機輸入"th"，如果設定都正常，就會進入Torch命令模式。
 
-如果終端機輸入"th"，卻沒有正常出現進入Torch命令模式，解決辦法如下：
-進入到你下載的torch目錄內，會看到"install-deps"、"install.sh"
-在終端機重新執行安裝程序，執行順序是
->> 1. sudo bash install-deps
->> 2. sudo ./install.sh
+    如果終端機輸入"th"，卻沒有正常出現進入Torch命令模式，解決辦法如下：
+    進入到你下載的torch目錄內，會看到"install-deps"、"install.sh"
+    在終端機重新執行安裝程序，執行順序是
+    > 1. sudo bash install-deps
+    > 2. sudo ./install.sh
 
-當執行第二個時，請注意是否有出現詢問是否要加入Torch到環境變數，如上所示。
+    當執行第二個時，請注意是否有出現詢問是否要加入Torch到環境變數，如上所示。
 
-查看系統環境變數，可在"~/.bashrc"內觀看
-會看到最後一行出現". /home/ubuntu/src/torch/install/bin/torch-activate" 。
+    查看系統環境變數，可在"~/.bashrc"內觀看
+    會看到最後一行出現". /home/ubuntu/src/torch/install/bin/torch-activate" 。
 
 13. 請注意在Ubuntu14.04在終端機執行腳本方式是透過"sh"來進行(Ex:" sudo sh RunInstallTorch_GPU_20181118.sh ")，16.04可以用"."來取代"sh"進行。
 
