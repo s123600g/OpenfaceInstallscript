@@ -21,8 +21,7 @@ OpenFaceInstallScript-20181118目錄結構：
 4.  更改DemoCommand內容，Demo1.txt、Demo2.txt、Demo3.txt。
 
 5.  修正"RunInstallpip_20181118.sh"腳本內容關於
-
-  > sudo pip install scikit-learn  --修正為--> sudo pip install scikit-learn==0.18 #限定0.18版本。
+    > sudo pip install scikit-learn  --修正為--> sudo pip install scikit-learn==0.18 #限定0.18版本。
 
 6.  更新注意事項說明。
 
