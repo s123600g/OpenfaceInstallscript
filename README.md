@@ -1,14 +1,13 @@
 # Ubuntu 14.04 or 16.04 安裝Openface應用
 本文是安裝Openface實戰筆記，目前有測試在Ubuntu14.04與16.04下使用 。
 
-Openface GitHub:
-https://github.com/cmusatyalab/openface.git
+[Openface GitHub]: <https://github.com/cmusatyalab/openface.git>
 
 OpenFaceInstallScript-20181118目錄結構：
 ----------------------------------------------------------------------------------------------------------------------------------
-1.InstallOpenface(安裝Openface腳本)
+1.  InstallOpenface(安裝Openface腳本)
 
-2.DemoScript(測試運作指令)
+2.  DemoScript(測試運作指令)
 
 2018/11/18更新事項：
 ----------------------------------------------------------------------------------------------------------------------------------
@@ -32,41 +31,41 @@ OpenFaceInstallScript-20181118目錄結構：
 
 2018/08/16更新事項：
 -----------------------------------------------------------------------------------------------------------------------------------
-1.增加一些安裝腳本指令註解說明.
+1.  增加一些安裝腳本指令註解說明.
 
-2.修改更新注意事項說明.
+2.  修改更新注意事項說明.
 
-3.修改安裝前條件說明.
+3.  修改安裝前條件說明.
 
-3.重新整理安裝腳本內的指令.
+3.  重新整理安裝腳本內的指令.
 
-4.更新 RunInstallpip_20180816.sh 內容
-  + sudo pip install nolearn # for use nolearn.DBN
+4.  更新 RunInstallpip_20180816.sh 內容
+    + sudo pip install nolearn # for use nolearn.DBN
   
-5.更新 RunInstallOpenCV_20180816.sh 內容
-  - mkdir release
-  + sudo mkdir release
+5.  更新 RunInstallOpenCV_20180816.sh 內容
+    - mkdir release
+    + sudo mkdir release
   
-6.更新 RunInstallOpenface_20180816.sh 內容
-  + mkdir ~/data/
-  + cd ~/data
-  + git clone https://github.com/cmusatyalab/openface.git
+6.  更新 RunInstallOpenface_20180816.sh 內容
+    + mkdir ~/data/
+    + cd ~/data
+    + git clone https://github.com/cmusatyalab/openface.git
   
 #備註 "+" --> 增加 ，"-" --> 刪減
 
 安裝前條件：
 ---------------------------------------------------------------------------------------------------------------------------------------
-1.Ubuntu 安裝最低版本為14.04 LTS ，目前已測試過16.04 LTS 是可行，18.04 LTS目前只有測試過可以安裝尚未測試是否可運行。
+1.  Ubuntu 安裝最低版本為14.04 LTS ，目前已測試過16.04 LTS 是可行，18.04 LTS目前只有測試過可以安裝尚未測試是否可運行。
 
-2.如果是只使用CPU版本的話,不用管顯示卡部份，如果要使用顯示卡必須使用Nvidia顯示卡。
+2.  如果是只使用CPU版本的話,不用管顯示卡部份，如果要使用顯示卡必須使用Nvidia顯示卡。
 
-3.如果是要使用到GPU版本的話,下列安裝步驟執行之前要先做安裝顯示卡驅動和CUDA,如果是筆電須注意雙顯切換問題,要先測試好驅動穩定性和能夠切換到使用GPU而不是使用內顯。
+3.  如果是要使用到GPU版本的話,下列安裝步驟執行之前要先做安裝顯示卡驅動和CUDA,如果是筆電須注意雙顯切換問題,要先測試好驅動穩定性和能夠切換到使用GPU而不是使用內顯。
 
-4.如果顯示卡驅動和CUDA都裝好了，可以先測試在Nvidia-settings裡面看到有兩張顯卡資訊一張是內顯一張是外顯GPU,再來是Nvidia-smi裡面資訊能夠看到GPU正在運行中。
+4.  如果顯示卡驅動和CUDA都裝好了，可以先測試在Nvidia-settings裡面看到有兩張顯卡資訊一張是內顯一張是外顯GPU,再來是Nvidia-smi裡面資訊能夠看到GPU正在運行中。
 
-5.可在nvidia-settings裡面設定切換要使用Nvidia顯示卡或者Intel內顯。
+5.  可在nvidia-settings裡面設定切換要使用Nvidia顯示卡或者Intel內顯。
 
-6.如果要透過終端機切換Nvidia和內顯部份，可透過sudo prime-select nvidia(外顯) 或 sudo prime-select intel(內顯)
+6.  如果要透過終端機切換Nvidia和內顯部份，可透過sudo prime-select nvidia(外顯) 或 sudo prime-select intel(內顯)
 
 安裝步驟：
 ---------------------------------------------------------------------------------------------------------------------------------------
@@ -79,7 +78,6 @@ OpenFaceInstallScript-20181118目錄結構：
 
 查看當前位置底下所有目錄檔案清單，透過"ls"
 >> $ ls
-
 
 
 以Ubuntu14.04為例，假如要執行"RunInstallpip_20181118.sh"腳本，透過"sh"
@@ -205,8 +203,8 @@ yes  <---請務必要輸入yes，否則系統會抓不到Torch
 查看系統環境變數，可在"~/.bashrc"內觀看
 會看到最後一行出現". /home/ubuntu/src/torch/install/bin/torch-activate" 。
 
-13.請注意在Ubuntu14.04在終端機執行腳本方式是透過"sh"來進行(Ex:" sudo sh RunInstallTorch_GPU_20181118.sh ")，16.04可以用"."來取代"sh"進行。
+13. 請注意在Ubuntu14.04在終端機執行腳本方式是透過"sh"來進行(Ex:" sudo sh RunInstallTorch_GPU_20181118.sh ")，16.04可以用"."來取代"sh"進行。
 
-14.關於Python的scikit-learn套件，有限定版本要求，在"RunInstallpip_20181118.sh"腳本中安裝指令已固定要求安裝版本為0.18版，0.20版本或低於0.18版本都會出問題，請注意一定要0.18版本。
+14. 關於Python的scikit-learn套件，有限定版本要求，在"RunInstallpip_20181118.sh"腳本中安裝指令已固定要求安裝版本為0.18版，0.20版本或低於0.18版本都會出問題，請注意一定要0.18版本。
 
-16.本專案腳本在安裝時，會自動在家目錄底下建立一個"src"目錄，裡面會放置"dlib-18.16"、"torch"、"data"內放置"openface"，總共會有三個目錄資料，不管是運作還是安裝都會需要用到，請勿隨意更動。
+16. 本專案腳本在安裝時，會自動在家目錄底下建立一個"src"目錄，裡面會放置"dlib-18.16"、"torch"、"data"內放置"openface"，總共會有三個目錄資料，不管是運作還是安裝都會需要用到，請勿隨意更動。
