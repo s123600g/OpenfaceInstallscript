@@ -1,7 +1,7 @@
 # Ubuntu 14.04 or 16.04 安裝Openface應用
 本文是安裝Openface實戰筆記，目前有測試在Ubuntu14.04與16.04下使用 。 <br/>
 
-關於Openface連結：[Openface GitHub](https://github.com/cmusatyalab/openface.git)
+關於Openface連結：[Openface GitHub](https://github.com/cmusatyalab/openface.git) or [Openface Website](http://cmusatyalab.github.io/openface/)
 
 OpenFaceInstallScript-20181118目錄結構：
 ----------------------------------------------------------------------------------------------------------------------------------
