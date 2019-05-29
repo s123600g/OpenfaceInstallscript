@@ -40,18 +40,17 @@ OpenFaceInstallScript-20181118目錄結構：
 3.  重新整理安裝腳本內的指令.
 
 4.  更新 RunInstallpip_20180816.sh 內容
-    + sudo pip install nolearn # for use nolearn.DBN
+    增加 sudo pip install nolearn # for use nolearn.DBN
   
 5.  更新 RunInstallOpenCV_20180816.sh 內容
-    - mkdir release
-    + sudo mkdir release
+    刪減 mkdir release
+    增加 sudo mkdir release
   
 6.  更新 RunInstallOpenface_20180816.sh 內容
-    + mkdir ~/data/
-    + cd ~/data
-    + git clone https://github.com/cmusatyalab/openface.git
-  
-#備註 "+" --> 增加 ，"-" --> 刪減
+    增加 mkdir ~/data/
+    增加 cd ~/data
+    增加 git clone https://github.com/cmusatyalab/openface.git
+    
 
 安裝前條件：
 ---------------------------------------------------------------------------------------------------------------------------------------
